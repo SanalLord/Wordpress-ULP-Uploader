@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>𝙷𝙰𝙲𝙺𝙴𝙳 𝙱𝚈 𝙳𝙾𝙳𝚂</title>
+        
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Audiowide&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Nosifer&family=Pirata+One&family=Audiowide&family=Indie+Flower&family=New+Rocker&family=Iceland&display=swap" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Mate&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Iceland&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=KoHo:wght@600&display=swap");
+            @import url("https://fonts.googleapis.com/css?family=Kelly+Slab");
+
+            :root {
+                --red: #ff0000;
+                --neon-blue: #04f86f;
+                --indian-orange: #ff9933;
+                --indian-green: #138808;
+                --green: #09a72d;
+                --cyan: #00ffff;
+                --neon-yellow: #f9fd0e;
+                --neon-cyan: #0ef9fd;
+                --neon-pink: #fd0ef9;
+            }
+
+            body {
+                background: url("https://nathanprinsley-files.prinsh.com/data-1/images/NathanPrinsley-anonymous-background.jpg") no-repeat center center fixed;
+                background-size: cover;
+                font-family: "Audiowide", cursive, sans-serif;
+                position: relative;
+                color: white;
+                margin: 0;
+            }
+
+            body::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.1);
+                z-index: 0;
+            }
+
+            #glitchCanvas {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: 1;
+                pointer-events: none;
+                mix-blend-mode: screen;
+            }
+
+            .main-text {
+                font: 1.7em "Kelly Slab", sans-serif;
+                color: white;
+                text-align: center;
+                animation: glowing 1s linear infinite;
+            }
+
+            @keyframes glowing {
+                0%,
+                100% {
+                    color: #ff0000;
+                }
+                25% {
+                    color: #d3bf35;
+                }
+                50% {
+                    color: #ff0a00;
+                }
+                75% {
+                    color: #00eaff;
+                }
+                100% {
+                    color: #00ff42;
+                }
+            }
+
+            #rainbowText {
+                font-size: 1.2em;
+                margin-top: 15px;
+                user-select: none;
+            }
+
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 202px;
+                text-align: center;
+                position: relative;
+                z-index: 2;
+            }
+
+            img.logo {
+                width: 200px;
+                user-select: none;
+                animation: pulse 2s infinite;
+            }
+
+            @keyframes pulse {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.05);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+
+            hr {
+                border: 0;
+                height: 2px;
+                background: linear-gradient(to right, transparent, var(--red), transparent);
+                margin: 5px 0;
+            }
+
+            #playMusic {
+                background-color: red;
+                color: white;
+                border: none;
+                padding: 7px 13px;
+                font-size: 12px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            #playMusic:hover {
+                background-color: darkred;
+            }
+
+            .telegram-button,
+            .instagram-button {
+                display: inline-block;
+                height: 20px;
+                box-sizing: border-box;
+                cursor: pointer;
+                border-radius: 3px;
+                padding: 3px 6px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                font-size: 11px;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .telegram-button {
+                background-color: #0088cc;
+            }
+
+            .telegram-button:hover {
+                background-color: #007dbb;
+            }
+
+            .telegram-button:active {
+                background-color: #026698;
+            }
+
+            .telegram-button i {
+                display: inline-block;
+                height: 12px;
+                width: 14px;
+                background: url("https://telegram.org/img/oauth/tg_button_small.png") no-repeat;
+                background-size: contain;
+                margin-right: 2px;
+            }
+
+            .instagram-button {
+                background-color: #e1306c;
+            }
+
+            .instagram-button:hover {
+                background-color: #c72b60;
+            }
+
+            .instagram-button:active {
+                background-color: #b12655;
+            }
+
+            .instagram-button i {
+                display: inline-block;
+                height: 12px;
+                width: 14px;
+                background: url("https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png") no-repeat;
+                background-size: contain;
+                margin-right: 2px;
+            }
+
+            .clock {
+                font-family: "Iceland", monospace;
+                font-size: 2em;
+                letter-spacing: 3px;
+                color: var(--neon-blue);
+                margin: 20px 0;
+            }
+
+            jordan{                
+                background: rgba(0, 0, 0, 0.7);                
+                font-family: "Press Start 2P", cursive;
+                font-size: 14px;
+                z-index: 3;
+            }
+
+            footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.7);
+                border-top: 2px solid var(--red);
+                padding: 10px 0;
+                font-family: "Press Start 2P", cursive;
+                font-size: 12px;
+                color: white;
+                z-index: 3;
+            }
+
+            @media (max-width: 768px) {
+                #title {
+                    font-size: 1.8em;
+                }
+                img.logo {
+                    width: 150px;
+                }
+            }
+        </style>
+    </head>
+
+    <body oncontextmenu="return false;" onmousedown="return false;" onkeydown="return false;" onclick="document.getElementById('lagu').play();">
+        <canvas id="glitchCanvas"></canvas>
+
+        <div class="container">
+
+            <div id="rainbowText"></div>
+
+
+            <div style="background: rgba(0, 0, 0, 0); padding: 15px; border-left: 3px solid var(--white); margin: 20px 0;">
+            <h1><font size="5" style="color: red; text-shadow: 0px 1px 6px; background:url('https://i.hizliresim.com/q8029t1.gif');">𝙷𝙰𝙲𝙺𝙴𝙳 𝙱𝚈 𝙳𝙾𝙳𝚂 </font></h1>
+                    <p style="font-family: 'Nosifer', cursive; line-height: 1.6;">
+                    <h3><span style="color: var(--red);"></span></h3>
+                    <strong><span style="color: var(--neon-cyan);">! Opps ! Admin , the site is down</span></strong><br />
+                    <span style="color: var(--neon-cyan);">I haven't leaked any data, but I could...</span><br />
+                    <span style="color: var(--neon-cyan);">t.me/DodsGudinne</span>
+
+            </div>
+
+
+        <audio src="https://aktoros.com/keskin.mp3" id="lagu" loop></audio>
+        </script>
+        <br />
+        <br />
+    </body>
+</html>
